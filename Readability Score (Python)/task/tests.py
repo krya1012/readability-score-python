@@ -1,3 +1,3 @@
-from test.tests import TestStage1
+from test.tests import TestStage5
 
-if __name__ == '__main__':    TestStage1("readability.readability").run_tests()
+if __name__ == '__main__':    TestStage5('readability.readability').run_tests()
