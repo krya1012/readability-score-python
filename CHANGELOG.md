@@ -17,6 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   Readability Index (ARI), with a predicted reader age range looked up from the score.
 - Stage 4 "More formulas": count syllables per word, compute the Flesch-Kincaid Readability Test score,
   and print an overall average reader age derived from the ARI and Flesch-Kincaid age ranges.
+- Stage 5 "Frequency Inc": count "difficult words" (words not present in a word-list file given as a
+  second CLI argument) and compute the Dale-Chall Readability Index, factoring it into the average age.
 
 ### Changed
 - Input is now read from a text file passed as a command-line argument, replacing Stage 1's stdin
@@ -25,3 +27,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   output from Stage 3).
 - Age-range wording for the ARI (and now Flesch-Kincaid) score changed from "this text should be
   understood by ... year olds" to "(about ... year olds)." per Stage 4's examples.
+- CLI now requires a second argument (word-list file). Output wording for ARI/Flesch-Kincaid/Dale-Chall
+  changed to "X. The text can be understood by Y-Z year olds."; average age is now the mean of all three
+  index age ranges, rounded to 1 decimal.
