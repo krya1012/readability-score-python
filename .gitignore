@@ -1,0 +1,6 @@
+# Ignore everything by default, then allow only directories, .py and .md files
+*
+!*/
+!*.py
+!*.md
+!/.gitignore
